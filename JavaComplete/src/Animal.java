@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.Scanner;
 import java.util.*;
 public class Animal {
@@ -158,6 +159,23 @@ public class Animal {
 
         public static void main(String[] args) {
         Animal theAnimal = new Animal();
+
+        int[] favoriteNumber = new int[20];
+        favoriteNumber[0] = 100;
+
+        String[] stringArray = {"Random", "Words", "Here"};
+        for (String word : stringArray) {
+            System.out.println(word);
+        }
+
+//        String[][][] arrayName = {{{}}};
+        // Very complicated multi-dimension array
+            String[] cloneOfArray = Arrays.copyOf(stringArray, 3);
+            System.out.println(Arrays.toString(cloneOfArray));
+            System.out.println(Arrays.binarySearch(cloneOfArray, "Random"));
+
+            
+
 
     }
 }

@@ -16,5 +16,7 @@ public class Cat extends Animal {
 
         System.out.println("Fido says " + theAnimals[0].makeSound());
         System.out.println("Fluffy says " + theAnimals[1].makeSound());
+
+        speakAnimal(fluffy);
     }
 }
