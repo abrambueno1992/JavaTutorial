@@ -24,7 +24,7 @@ public class Animal {
     }
 
     public void getUniqueID() {
-        return uniqueID;
+//        return uniqueID;
     }
 
     public void setUniqueID(long uniqueID) {
@@ -84,6 +84,48 @@ public class Animal {
                     break;
         }
 
+    }
+    public void setHeight(float height) {
+        this.height = height;
+    }
+
+    protected static void countTo(int startingNumber) {
+        for (int i = startingNumber; i <= 100; i++) {
+            if (i == 90) continue;
+            System.out.println(i);
+        }
+    }
+
+    protected static String printNumbers(int maxNumbers) {
+        int i = 1;
+        while (i < (maxNumbers / 2)) {
+            System.out.println(i);
+            i++;
+            if (i == (maxNumbers/2)) break;
+        }
+        Animal.countTo(maxNumbers/2);
+        return "End of printNumbers";
+    }
+
+    protected static void guessMyNumber() {
+        int number;
+        do {
+            System.out.println("Guess Number up to 100");
+            while (!userInput.hasNextInt()) {
+                String numberEntered = userInput.next();
+                System.out.printf("%s is not a number\n", numberEntered);
+            }
+            number = userInput.nextInt();
+        } while (number != 50);
+    }
+
+    public String makeSound() {
+        return "Grrrr";
+
+    }
+
+    public static void speakAnimal(Animal randAnimal) {
+        System.out.println("Animal says " + randAnimal.makeSound());
     }
 
     public Animal() {
